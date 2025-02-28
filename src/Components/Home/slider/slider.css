@@ -1,0 +1,236 @@
+/* General container styling */
+.service {
+  background-color: #fff;
+  border-radius: 15px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* flex-wrap: wrap; */
+}
+/* Box styling */
+.box {
+  width: 22% !important;
+  height: 300px;
+  /* background: linear-gradient(to right, var(--blue--), #0000009f); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 4rem;
+}
+
+.box:hover {
+  width: 50% !important;
+  z-index: 10;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.box:not(:hover) {
+  width: 22%;
+}
+
+/* Content inside each box */
+.content {
+  opacity: 0.9;
+}
+
+/* Image inside each box */
+.content img,
+.wep {
+  width: 60%;
+  height: auto;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.wep {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem !important;
+  font-weight: bold;
+  z-index: 5;
+  margin-bottom: 0;
+  color: #bad7f5;
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .wep {
+    font-size: 4rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .wep {
+    font-size: 3rem !important;
+  }
+}
+
+.box:hover .content img {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+/* Text inside each box */
+.content p {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 5;
+  margin-bottom: 0;
+}
+.content .title {
+  color: #40a8a1 !important;
+}
+/* Description that appears on hover */
+.description {
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: initial;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90%;
+  color: black;
+}
+
+.box:hover .description,
+.content:hover .wep,
+.content:hover .btn {
+  display: block !important;
+}
+
+/* Title of the description */
+.description h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Description text */
+.description p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 20px;
+  width: 10rem;
+  color: #000 !important;
+  border: none;
+  background-color: #bad7f5 !important;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(to right, var(--blue--), #0000009f);
+  color: #000 !important;
+  background-color: #bad7f5 !important;
+}
+.text-service {
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: cursive;
+  text-decoration: underline;
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #020f28, #59eee4);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.text-service span {
+  font-size: 2.5rem;
+  font-family: initial;
+  background: linear-gradient(to right, #020f28, #40a8a1);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+@media (max-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .box {
+    width: 75% !important;
+    height: 300px !important;
+    background-color: #426dc5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 4rem;
+  }
+  .box:hover {
+    width: 90% !important;
+    z-index: 10;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    width: 80% !important;
+    height: 300px !important;
+    background-color: #426dc5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 4rem;
+  }
+  .box:hover {
+    width: 80% !important;
+    z-index: 10;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

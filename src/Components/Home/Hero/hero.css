@@ -1,0 +1,103 @@
+.hero {
+  height: 100vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+.text {
+  text-align: start;
+  color: #fff;
+
+  /* margin-right: 5rem !important; */
+}
+
+.text h2 span {
+  font-size: 30px;
+  background: linear-gradient(to right, #426dc5, #5dc2bc); /* دمج اللونين */
+  -webkit-background-clip: text; /* جعل التأثير يعمل على النص فقط */
+  color: transparent; /* إخفاء النص الأصلي */
+}
+
+.text p {
+  width: 50%;
+  margin-top: 5rem;
+  font-size: 17px;
+  line-height: 30px;
+}
+.text button {
+  padding: 10px;
+  margin-top: 1.5rem;
+  font-size: 20px;
+  width: 10rem;
+  background-color: #bad7f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+}
+.text button:hover {
+  background: linear-gradient(
+    to right,
+    var(--blue--),
+    #0000009f
+  ); /* تدرج لوني خطي من اليسار إلى اليمين */
+  color: #fff;
+}
+.text button a {
+  text-decoration: none;
+  color: #000;
+}
+.text button a:hover {
+  color: #fff !important;
+}
+
+
+@media (max-width: 710px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .text {
+    margin-top: 6rem;
+  }
+
+  .text p {
+    margin-top: 1rem;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .ANIMATION {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .text {
+    margin-top: 6rem;
+  }
+  .text h2 span {
+    font-size: 20px;
+  }
+  .text p {
+    margin-top: 1rem;
+    font-size: 15px;
+    line-height: 20px;
+    width: 80%;
+  }
+
+  .ANIMATION {
+    width: 200px;
+    height: 200px;
+  }
+}
